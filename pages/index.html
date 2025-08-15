@@ -1,57 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+<meta charset="UTF-8">
 
-    <h1 class="index-title">我是首頁</h1>
-
-    <div class="card" style="width: 18rem">
-      <img src="../assets/images/dog.jpg" class="card-img-top" alt="cat" />
-      <div class="card-body">
-        <h5 class="card-title">卡片元件</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, odit, iusto odio assumenda alias id
-          nobis earum!
-        </p>
-      </div>
+<!-- Header -->
+<header class="bg-white border-bottom">
+  <div class="container d-flex align-items-center justify-content-between" style="height:64px;">
+    <a href="#" class="d-inline-flex align-items-center gap-2 text-decoration-none">
+      <img src="../assets/images/logo.svg" alt="職旅" class="img-fluid" style="height:28px;">
+      <span class="text-muted small d-none d-sm-inline"></span>
+    </a>
+    <nav class="d-none d-md-flex gap-4">
+      <a class=" text-decoration-none fw-normal" href="#">服務方案</a>
+      <a class=" text-decoration-none fw-normal" href="#">開啟職旅</a>
+      <a class=" text-decoration-none fw-normal" href="#">聯絡我們</a>
+    </nav>
+    <div class="d-flex align-items-center gap-2">
+      
+      <img src="../assets/images/avatar.png" class="rounded-circle" width="32" height="32" alt="">
+      <span class="small text-muted d-none d-sm-inline">Mokumaru</span>
     </div>
+  </div>
+</header>
 
-    <!-- Modal 按鈕 -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      打開 modal
-    </button>
+<!-- Tabs -->
+<div class="bg-white border-bottom ">
+  <div class="container py-3 d-flex gap-2 justify-content-center">
+    <a class="btn btn-outline-secondary btn-sm active" href="#"><i class="bi bi-person me-1"></i> 個人資料</a>
+    <a class="btn btn-outline-secondary btn-sm" href="#"><i class="bi bi-bag-check me-1"></i> 應徵紀錄</a>
+    <a class="btn btn-outline-secondary btn-sm" href="#"><i class="bi bi-graph-up me-1"></i> 職涯計劃</a>
+  </div>
+</div>
 
-    <!-- Modal 元件 -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal 標題</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">內容</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-            <button type="button" class="btn btn-primary">確定</button>
+<!-- Content -->
+<main class="container my-4 my-md-5">
+  <div class="card shadow-sm">
+    <div class="card-body p-4 p-md-5">
+      <div class="d-flex align-items-center gap-3 mb-4">
+        <img src="../assets/images/avatar.png" alt="" class="rounded-circle object-fit-cover" width="88" height="88">
+        <button class="btn btn-outline-secondary btn-sm">
+          <i class="bi bi-arrow-clockwise me-1"></i> 更新頭貼
+        </button>
+      </div>
+
+      <form class="row g-3">
+        <div class="col-12 col-lg-8">
+          <label class="form-label">暱稱</label>
+          <input type="text" class="form-control" value="Mokumaru">
+        </div>
+
+        <div class="col-12 col-lg-8">
+          <label class="form-label d-block mb-1">性別</label>
+          <div class="d-flex align-items-center gap-3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="g1" checked>
+              <label class="form-check-label" for="g1">女性</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="g2">
+              <label class="form-check-label" for="g2">男性</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="g3">
+              <label class="form-check-label" for="g3">不透露</label>
+            </div>
           </div>
         </div>
-      </div>
+
+        <div class="col-12 col-lg-8">
+          <label class="form-label">生日</label>
+          <input type="date" class="form-control" value="2000-01-10">
+        </div>
+
+        <div class="col-12 col-lg-8">
+          <label class="form-label d-block">狀態</label>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary btn-sm">轉求職狀態</button>
+            <button type="button" class="btn btn-outline-secondary btn-sm dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">開放機會</a></li>
+              <li><a class="dropdown-item" href="#">積極求職</a></li>
+              <li><a class="dropdown-item" href="#">暫不考慮</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-8">
+          <label class="form-label">信箱</label>
+          <input type="email" class="form-control" value="mokumaru@mail.com">
+          <div class="form-text">請避免使用 Yahoo/Hotmail 作為聯絡信箱，以免遺漏信件。</div>
+        </div>
+
+        <div class="col-12 col-lg-8">
+          <label class="form-label">聯絡電話</label>
+          <input type="tel" class="form-control" value="09-1234-5678">
+        </div>
+
+        <div class="col-12 col-lg-8">
+          <label class="form-label">通訊地址</label>
+          <input type="text" class="form-control" value="高雄市三民區博愛一路 87 號">
+        </div>
+
+        <div class="col-12 col-lg-8 d-flex gap-2 mt-2">
+          <button type="reset" class="btn btn-outline-secondary">重置修改</button>
+          <button type="submit" class="btn btn-primary">儲存更新</button>
+        </div>
+      </form>
     </div>
+  </div>
+</main>
 
-    <%- include('./layout/footer'); -%>
-
-    <script type="module" src="../main.js"></script>
-  </body>
-</html>
+<!-- Footer -->
+<footer class="py-4 mt-5 border-top bg-white">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <div class="d-flex flex-wrap gap-3">
+      <a href="#" class="link-secondary text-decoration-none">服務方案</a>
+      <a href="#" class="link-secondary text-decoration-none">開啟職旅</a>
+      <a href="#" class="link-secondary text-decoration-none">聯絡我們</a>
+      <a href="#" class="link-secondary text-decoration-none">隱私權政策</a>
+      <a href="#" class="link-secondary text-decoration-none">用戶條款</a>
+    </div>
+    <small class="text-muted">Copyright © 2025 職旅 workway. All rights reserved.</small>
+  </div>
+</footer>
+<script type="module" src="../main.js"></script>
