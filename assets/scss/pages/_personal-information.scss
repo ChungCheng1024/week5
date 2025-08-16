@@ -35,13 +35,15 @@ input[type="radio"] {
 
 
 
-.btn-color {
+.btn-color-1 {
     background-color: #FCFCFD;  /* 按鈕背景 */
     color: #141A1F;          /* 初始文字與 SVG 顏色 */
-    
+    border: #D1D9E1 1px solid;
+    border-radius: 16px;
+    padding: 12px 20px;
   }
   
-.btn-color:hover {
+.btn-color-1:hover {
     background-color: #000;  /* hover 時背景 */
     color: #FCFCFD;             /* hover 時文字與 SVG 同步變白 */
 }
