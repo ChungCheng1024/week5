@@ -8,9 +8,143 @@
   </head>
   <body>
     <%- include('./layout/header'); -%>
-    <h1>我是contact</h1>
+    <main class="bg-gray " style="padding-top:80px; padding-bottom:80px">
+      <div class="container" >
+        <div class="row">
+          <div class="col-10 mx-auto "> 
+            <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class=" me-3 btn-color active fw-norma " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#141A1F" style="position: relative; top: -3px;">
+                  <path d="M360.11-408Q340-408 326-421.89q-14-13.88-14-34Q312-476 325.89-490q13.88-14 34-14Q380-504 394-490.11q14 13.88 14 34Q408-436 394.11-422q-13.88 14-34 14Zm240 0Q580-408 566-421.89q-14-13.88-14-34Q552-476 565.89-490q13.88-14 34-14Q620-504 634-490.11q14 13.88 14 34Q648-436 634.11-422q-13.88 14-34 14ZM480.46-168q130.46 0 221-91Q792-350 792-479.76q0-23.24-5-52.74-5-29.5-13-51.5-21 5-38 6.5t-40 1.5q-85.96 0-162.48-33.5T397-706q-37 78-93.5 129T170-500q-1 4-1.5 10t-.5 10q0 130 91 221t221.46 91ZM480-96q-79.38 0-149.19-30T208.5-208.5Q156-261 126-330.96t-30-149.5Q96-560 126-630q30-70 82.5-122t122.46-82q69.96-30 149.5-30t149.55 30.24q70 30.24 121.79 82.08 51.78 51.84 81.99 121.92Q864-559.68 864-480q0 79.38-30 149.19T752-208.5Q700-156 629.87-126T480-96Zm-55-691q46 63 117 101t154 38q12 0 21-.5t23-2.47Q691-720 625-756t-144.51-36q-12.49 0-26.47 1.5Q440.05-789 425-787ZM187-585q57-29 95-71.5T342-758q-63 37-100 78t-55 95Zm238-202Zm-83 29Z"/>
+                </svg><a href="personal-information.html">個人資料</a>
+                 </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class=" me-3 btn-color fw-normal" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><svg class="me-1" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#141A1F" style="position: relative; top: -3px;"><path d="M671.77-96Q592-96 536-152.23q-56-56.22-56-136Q480-368 536.23-424q56.22-56 136-56Q752-480 808-423.77q56 56.22 56 136Q864-208 807.77-152q-56.22 56-136 56ZM727-199l34-34-65-65v-86h-48v106l79 79Zm-511 55q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h171q8-31 33.5-51.5T480-888q34 0 59.5 20.5T573-816h171q29.7 0 50.85 21.15Q816-773.7 816-744v235q-17-11-34.5-19.5T744-542v-202h-72v120H288v-120h-72v528h202.32Q425-195 432-178t19 34H216Zm263.79-600q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Z"/></svg> <a href="booking-history.html">預約紀錄</a></button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class=" btn-color fw-normal" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false"><svg class="me-1" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#141A1F" style="position: relative; top: -3px;"><path d="M323.79-288q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-156q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5Zm0-156q15.21 0 25.71-10.29t10.5-25.5q0-15.21-10.29-25.71t-25.5-10.5q-15.21 0-25.71 10.29t-10.5 25.5q0 15.21 10.29 25.71t25.5 10.5ZM432-288h240v-72H432v72Zm0-156h240v-72H432v72Zm0-156h240v-72H432v72ZM216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h528q29.7 0 50.85 21.15Q816-773.7 816-744v528q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm0-72h528v-528H216v528Zm0-528v528-528Z"/></svg><a href="career-plan.html">職旅計畫</a> </button>
+              </li>
+            </ul>
+          <section class="d-flex mid-color shadow p-5  bg-body re-main " >
+            <div class="col-3 me-4"><h5 class="fw-normal">職旅計劃概況</h5><p class="fw-normal mb-4" style="color: #667F99; font-size: 14px;">欄位皆為</p></div>
+            <div class="col-7">
+            <span class="d-block mb-2 ">目前職業狀態</span>
+            <div class="d-flex flex-wrap mb-4">
+              <label class="d-flex align-items-center me-4 mb-2" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="women">
+                <input type="radio" name="gen" id="women" class="" style="width:20px; height:20px;">
+                <span>全職上班族</span>
+              </label>
+              <label class="d-flex align-items-center me-4 mb-2" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="man">
+                <input type="radio" name="gen" id="man" class="" style="width:20px; height:20px;">
+                <span>兼職工作者</span>
+              </label>
+              <label class="d-flex align-items-center me-4 mb-2" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>自由工作者/接案者</span>
+              </label>
+              <label class="d-flex align-items-center" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>數位遊牧者</span>
+              </label>
+              <label class="d-flex align-items-center me-4" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>創業者/企業家</span>
+              </label>
+              <label class="d-flex align-items-center me-4" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>待業中</span>
+              </label>
+              <label class="d-flex align-items-center" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>其他</span>
+              </label>
+            </div>
+            <select class="form-select mb-4" aria-label="Default select example">
+              <option selected>工作產業</option>
+              <option value="1">科技</option>
+              <option value="2">媒體</option>
+              <option value="3">教育</option>
+              <option value="4">金融</option>
+              <option value="5">醫療健康</option>
+              <option value="5">零售製造</option>
+              <option value="5">服務業</option>
+              <option value="5">藝術創意</option>
+              <option value="5">非營利組織</option>
+            </select>
+            <select class="form-select mb-4" aria-label="Default select example">
+              <option selected>工作年資</option>
+              <option value="1">一年以下</option>
+              <option value="2">1-3年</option>
+              <option value="3">3-5年 </option>
+              <option value="4">5-10年</option>
+              <option value="5">10年以上</option>
+            </select>
+            <div class="mb-4">
+            <span class="d-block mb-2 ">月收入區間</span>
+            <div class="d-flex flex-wrap mb-4">
+              <label class="d-flex align-items-center me-4 " style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="women">
+                <input type="radio" name="gen" id="women" class="" style="width:20px; height:20px;">
+                <span>3萬以下</span>
+              </label>
+              <label class="d-flex align-items-center me-4 " style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="man">
+                <input type="radio" name="gen" id="man" class="" style="width:20px; height:20px;">
+                <span>3-5萬</span>
+              </label>
+              <label class="d-flex align-items-center me-4" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>5-8萬</span>
+              </label>
+              <label class="d-flex align-items-center me-4" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>8-12萬</span>
+              </label>
+              <label class="d-flex align-items-center me-4" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>12-20萬</span>
+              </label>
+              <label class="d-flex align-items-center me-4" style="font-size: 14px; line-height: 150%; font-weight: 400; letter-spacing: 0;" for="none">
+                <input type="radio" name="gen" id="none" class="" style="width:20px; height:20px;">
+                <span>20萬以上</span>
+              </label>
+            </div>
+            <div class="mb-4">
+              <textarea class="form-control py-1 mb-4" id="summary" rows="4" maxlength="300 " style="resize: none; padding: 16px 12px;">職業摘要（簡短描述您的專業背景和核心競爭力，最多 300 字）
+              </textarea>
+            </div>
+            <div class="mb-4">
+              <textarea class="form-control" rows="1" style="resize: none; padding: 16px 12px;">作品案例展示</textarea>
+            </div>
+            <div class="mb-2">
+              <span class="">附件檔案</span>
+            </div>
+              <button class=" btn-color fw-normal d-block mb-5 " ><svg style="position: relative; top: -3px;" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#141A1F"><path d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>上傳檔案</button>
+              <div class="mb-4">
+                <textarea class="form-control py-1 mb-4" id="summary" rows="4" maxlength="300 " style="resize: none; padding: 16px 12px;">1 年短期職涯目標（最多 300 字）
+                </textarea>
+              </div>
+              <div class="col-7 text-center ">
+                <button class="btn-color-1 fw-normal  me-4 " type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                  匯出PDF
+                  <svg style="position: relative; top: -3px;" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
+                    <path d="M522-480 333-669l51-51 240 240-240 240-51-51 189-189Z"/>
+                  </svg>
+                </button>
+                <button class="btn-color-1 fw-normal " type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                  儲存更新
+                  <svg style="position: relative; top: -3px;" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
+                    <path d="M522-480 333-669l51-51 240 240-240 240-51-51 189-189Z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            </div>
+          </section>
+          </div>
+        </div>
+      </div>
+    </main>
     <%- include('./layout/footer'); -%>
-
     <script type="module" src="../main.js"></script>
   </body>
 </html>
