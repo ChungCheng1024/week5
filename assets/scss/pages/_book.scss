@@ -9,6 +9,18 @@
 .btn01{
     border-radius: 16px;
     padding: 12px 20px;
-    background-color: #FCFCFD;
-    color: #141A1F;
+    background-color: #ffffff;
+    color: #000000;
+    & :hover {
+        background-color: #000000;
+        color: #ffffff;
+    }
 }
+.dropdown-toggle.no-caret::after { display: none !important; }
+
+/* 第1欄靠左，其他欄靠右 */
+.table.align-middle thead th:first-child,
+.table.align-middle tbody td:first-child { text-align: left; }
+
+.table.align-middle thead th:nth-child(n+2),
+.table.align-middle tbody td:nth-child(n+2) { text-align: right; }
