@@ -50,8 +50,16 @@
               <input type="text" class="form-control" id="floatingPassword" placeholder="" value="2000/01/10">
               <label for="floatingPassword">生日</label>
               <span class="d-block mt-4 mb-2">密碼</span>
-              <button class=" btn-color fw-normal mb-4"   type="button" role="tab" aria-controls="pills-profile" aria-selected="false">修改密碼<svg style="position: relative; top: -3px;" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#141A1F"><path d="M522-480 333-669l51-51 240 240-240 240-51-51 189-189Z"/></svg></button>
-              <div class="form-floating mb-3">
+              
+              <button id="btnChangePwd"
+              class="btn-color fw-normal mb-4"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#updatePwdModal">
+        修改密碼
+        <svg style="position: relative; top:-3px;" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="#141A1F"><path d="M522-480 333-669l51-51 240 240-240 240-51-51 189-189Z"/></svg>
+      </button>
+                    <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="mokumaru@mail.com">
                 <label for="floatingInput">信箱</label>
                 <p class="fw-normal mb-4" style="color: #667F99; font-size: 14px;">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
@@ -89,7 +97,32 @@
       </div>
     </main>
    <%- include('./layout/footer'); -%>
-    
+   <!-- Modal：放在 body 裡任一處（通常放在頁尾、footer 前） -->
+<div class="modal fade" id="updatePwdModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">更新密碼</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+      </div>
+      <div class="modal-body">
+        <!-- 內容可自行替換 -->
+        <input type="password" class="form-control mb-3" placeholder="新密碼">
+        <input type="password" class="form-control" placeholder="再次輸入新密碼">
+      </div>
+      <div class="modal-footer border-0">
+        <button class="btn btn-dark">更新密碼</button>
+      </div>
+    </div>
+  </div>
+</div>
     <script type="module" src="../main.js"></script>
+   <script>
+  const btn = document.getElementById('btnChangePwd');
+  const modalEl = document.getElementById('updatePwdModal');
+  btn.addEventListener('click', () => {
+    bootstrap.Modal.getOrCreateInstance(modalEl).show();
+  });
+</script>
   </body>
 </html>
