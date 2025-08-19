@@ -411,6 +411,7 @@ $spacer: 1rem !default;
 $spacers: (
   0: 0,
   1: $spacer * .25,
+  12p:$spacer * .75, // Deprecated in v5.3.0
   2: $spacer * .5,
   3: $spacer,
   4: $spacer * 1.5,
